@@ -16,13 +16,13 @@ const Hero: React.FC = () => {
         animate={{ opacity: 0.7 }}
         transition={{ duration: 1.5 }}
       />
-      
+
       {/* Subtle grid pattern overlay */}
       <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxnIGZpbGw9IiMyMDIwMjAiIGZpbGwtb3BhY2l0eT0iMC4wNSI+PHBhdGggZD0iTTM2IDM0djZoNnYtNmgtNnptNiA2djZoNnYtNmgtNnptLTEyIDBoNnY2aC02di02em0xMiAwaDZ2NmgtNnYtNnoiLz48L2c+PC9nPjwvc3ZnPg==')] opacity-20" />
-      
+
       <div className="container mx-auto px-4 z-10">
         <div className="flex flex-col-reverse lg:flex-row items-center justify-between gap-12">
-          <motion.div 
+          <motion.div
             className="lg:w-1/2"
             initial="hidden"
             animate="visible"
@@ -38,45 +38,48 @@ const Hero: React.FC = () => {
             <motion.div variants={textVariant(0.1)}>
               <span className="text-accent font-mono text-lg">Hello, I'm</span>
             </motion.div>
-            
-            <motion.h1 
+
+            <motion.h1
               className="text-5xl md:text-6xl lg:text-7xl font-bold mt-2"
               variants={textVariant(0.2)}
             >
               John E Vivas
             </motion.h1>
-            
-            <motion.h2 
+
+            <motion.h2
               className="text-3xl md:text-4xl font-semibold text-text-secondary mt-2"
               variants={textVariant(0.3)}
             >
               Fullstack Developer
             </motion.h2>
-            
-            <motion.p 
+
+            <motion.p
               className="text-text-secondary mt-6 max-w-lg text-lg"
               variants={textVariant(0.4)}
             >
-              I build modern, responsive web applications with cutting-edge 
-              technologies. Specializing in both frontend and backend development, 
-              I create seamless digital experiences that drive results.
+              I craft modern, responsive web applications using cutting-edge technologies. With a strong focus on both frontend and backend development, I build seamless, high-performance digital experiences that deliver real value.
             </motion.p>
-            
-            <motion.div 
+
+            <motion.div
               className="mt-8 flex flex-wrap gap-4"
               variants={textVariant(0.5)}
             >
-              <Button as={Link} to="/contact" variant="primary" size="lg">
-                Hire Me <ArrowRight className="ml-2" size={20} />
+              <Button variant="primary" size="lg">
+                <Link to="/contact" className="inline-flex items-center">
+                  Hire Me <ArrowRight className="ml-2" size={20} />
+                </Link>
               </Button>
-              
-              <Button as="a" href="/resume.pdf" variant="outline" size="lg">
-                Download CV <Download className="ml-2" size={20} />
+
+              <Button variant="outline" size="lg">
+                <a href="/docs/John_E_Vivas.pdf" className="inline-flex items-center" download>
+
+                  Download CV <Download className="ml-2" size={20} />
+                </a>
               </Button>
             </motion.div>
           </motion.div>
-          
-          <motion.div 
+
+          <motion.div
             className="lg:w-1/2 flex justify-center"
             variants={fadeIn('left', 0.5)}
             initial="hidden"
@@ -90,21 +93,21 @@ const Hero: React.FC = () => {
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.5, delay: 0.2 }}
               >
-                <img 
+                <img
                   src={profilePhoto}
                   alt="John Photo profile"
                   className="w-full h-full object-cover"
                 />
               </motion.div>
-              
+
               {/* Decorative elements */}
-              <motion.div 
+              <motion.div
                 className="absolute -bottom-6 -left-6 w-20 h-20 rounded-lg bg-accent"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 0.6, y: 0 }}
                 transition={{ duration: 0.5, delay: 0.4 }}
               />
-              <motion.div 
+              <motion.div
                 className="absolute -top-6 -right-6 w-20 h-20 rounded-lg bg-primary-light"
                 initial={{ opacity: 0, y: -20 }}
                 animate={{ opacity: 0.6, y: 0 }}
