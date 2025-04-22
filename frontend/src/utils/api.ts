@@ -1,13 +1,13 @@
 import axios from 'axios';
 import { Project, ContactFormData, LoginCredentials, User } from '../types';
-// import imgProfessionalPortfolio from '../../public/assets/img/professional_portfolio.png'
-// import reserveRooms from '../../public/assets/img/reserveRooms.png'
-// import advanceAndTech from '../../public/assets/img/AdvanceAndTechnology.png'
-// import brandBooster from '../../public/assets/img/brandBooster.png'
-// import badgeSpring from '../../public/assets/img/badgeSpring.png'
-// import hackathon from '../../public/assets/img/hackathon.png'
-// import badgeLiteratura from '../../public/assets/img/badgeliteralura.png'
-// import badgeConversor from '../../public/assets/img/badgeConversor.png'
+import imgProfessionalPortfolio from '../assets/img/professional_portfolio.png'
+import reserveRooms from '../assets/img/reserveRooms.png'
+import advanceAndTech from '../assets/img/AdvanceAndTechnology.png'
+import brandBooster from '../assets/img/brandBooster.png'
+import badgeSpring from '../assets/img/badgeSpring.png'
+import hackathon from '../assets/img/hackathon.png'
+import badgeLiteratura from '../assets/img/badgeliteralura.png'
+import badgeConversor from '../assets/img/badgeConversor.png'
 // Base API URL - Replace with your actual API URL in production
 const API_URL = 'https://api.example.com';
 
@@ -184,104 +184,12 @@ export const authApi = {
 };
 
 // Mock data for development
-// export const mockProjects: Project[] = [
-//   {
-//     id: 3,
-//     title: 'Brand Booster',
-//     description: 'COMING SOON! A powerful eCommerce platform designed to boost small, medium, and large businesses. Features include product management, order processing, and customer engagement tools.',
-//     image: brandBooster,
-//     demoUrl: '#',
-//     repoUrl: 'https://github.com/John-Vivas/Brand-Booster',
-//     technologies: ['React', 'Node.js', 'Express', 'MongoDB', 'Stripe', 'MercadoPago', 'JWT'],
-//     featured: true
-//   },
-//   {
-//     id: 2,
-//     title: 'COMING SOON! AVANCE AND TECHNOLOGY S.A.S',
-//     description: 'A modern and responsive company page showcasing the services and projects of Software A&T. Features include a portfolio section, testimonials, and a contact form.',
-//     image: advanceAndTech,
-//     demoUrl: '#',
-//     repoUrl: 'https://github.com/Advance-and-Technology/Page-Web',
-//     technologies: ['React', 'TypeScript', 'Firebase', 'Tailwind CSS', 'React Query'],
-//     featured: true
-//   },
-//   {
-//     id: 1,
-//     title: 'COMING SOON! Hackathon Project - Agents AI Reactor Microsoft',
-//     description: 'A hackathon project that leverages AI to develop a web application for managing natural medicine prescriptions.',
-//     image: hackathon,
-//     demoUrl: '#',
-//     repoUrl: '#',
-//     technologies: ['', '', '', '', ''],
-//     featured: true
-//   },
-//   {
-//     id: 4,
-//     title: 'Hackathon Project - ReserverRooms',
-//     description: 'A project by admin rooms that focuses on creating a web application for managing and monitoring admin activities. Features include user management, activity logs, and real-time notifications.',
-//     image: reserveRooms,
-//     demoUrl: 'https://front-hackathon-henna.vercel.app/',
-//     repoUrl: 'https://github.com/John-Vivas/Hackathon',
-//     technologies: ['React', 'javaScript', 'node.js', 'mongoDB', 'express'],
-//     featured: false
-//   },
-//   {
-//     id: 5,
-//     title: 'Professional portfolio website',
-//     description: 'A personal portfolio website showcasing my projects, skills, and experience. Features include a blog section, contact form, and responsive design.',
-//     image: imgProfessionalPortfolio,
-//     demoUrl: 'https://example.com/demo5',
-//     repoUrl: 'https://github.com/John-Vivas/Professional-Portfolio',
-//     technologies: ['React', 'TypeScript', 'Tailwind CSS', 'Vite', 'Framer Motion'],
-//     featured: false
-//   },
-//   {
-//     id: 6,
-//     title: 'Forohub-backend',
-//     description: 'A project with spring boot Lombok, spring security, and JWT. It is a backend application that provides RESTful APIs for managing user authentication and authorization.',
-//     image: badgeSpring,
-//     demoUrl: '#',
-//     repoUrl: 'https://github.com/yourusername/real-estate',
-//     technologies: ['Spring Boot', 'DevTools', 'MySQL', 'FlyWay', 'Spring Security'],
-//     featured: false
-//   },
-//   {
-//     id: 7,
-//     title: 'Literatura Backend',
-//     description: 'This app lets users manage books and authors: search books by title via an external API, view local book and author lists, find authors alive in a given year, and filter books by language.',
-//     image: badgeLiteratura,
-//     demoUrl: '#',
-//     repoUrl: 'https://github.com/John-Vivas/Literatura-BackenProyect2',
-//     technologies: ['Java', 'Spring Boot', 'Spring Data JPA', 'Git'],
-//     featured: false
-//   },
-//   {
-//     id: 8,
-//     title: 'Conversor de Monedas',
-//     description: 'A simple Java application that converts between different currencies using real-time exchange rates from an external API.',
-//     image: badgeConversor,
-//     demoUrl: '#',
-//     repoUrl: 'https://github.com/John-Vivas/Conversor-de-Monedas-BackendProject1',
-//     technologies: ['java'],
-//     featured: false
-//   },
-//   {
-//     id: 9,
-//     title: 'e-Commerce pesonal',
-//     description: 'A simple eCommerce website built with HTML and CSS, featuring a clean layout for displaying products, prices, and basic shopping interface elements.',
-//     image: badgeSpring,
-//     demoUrl: 'https://john-vivas.github.io/page/',
-//     repoUrl: 'https://github.com/John-Vivas/page',
-//     technologies: ['HTML', 'CSS', 'JavaScript'],
-//     featured: false
-//   }
-// ];
 export const mockProjects: Project[] = [
   {
     id: 3,
     title: 'Brand Booster',
     description: 'COMING SOON! A powerful eCommerce platform designed to boost small, medium, and large businesses. Features include product management, order processing, and customer engagement tools.',
-    image: '/assets/img/brandBooster.png',  // Ruta desde public
+    image: brandBooster,
     demoUrl: '#',
     repoUrl: 'https://github.com/John-Vivas/Brand-Booster',
     technologies: ['React', 'Node.js', 'Express', 'MongoDB', 'Stripe', 'MercadoPago', 'JWT'],
@@ -291,7 +199,7 @@ export const mockProjects: Project[] = [
     id: 2,
     title: 'COMING SOON! AVANCE AND TECHNOLOGY S.A.S',
     description: 'A modern and responsive company page showcasing the services and projects of Software A&T. Features include a portfolio section, testimonials, and a contact form.',
-    image: '/assets/img/AdvanceAndTechnology.png',  // Ruta desde public
+    image: advanceAndTech,
     demoUrl: '#',
     repoUrl: 'https://github.com/Advance-and-Technology/Page-Web',
     technologies: ['React', 'TypeScript', 'Firebase', 'Tailwind CSS', 'React Query'],
@@ -301,7 +209,7 @@ export const mockProjects: Project[] = [
     id: 1,
     title: 'COMING SOON! Hackathon Project - Agents AI Reactor Microsoft',
     description: 'A hackathon project that leverages AI to develop a web application for managing natural medicine prescriptions.',
-    image: '/assets/img/hackathon.png',  // Ruta desde public
+    image: hackathon,
     demoUrl: '#',
     repoUrl: '#',
     technologies: ['', '', '', '', ''],
@@ -311,18 +219,18 @@ export const mockProjects: Project[] = [
     id: 4,
     title: 'Hackathon Project - ReserverRooms',
     description: 'A project by admin rooms that focuses on creating a web application for managing and monitoring admin activities. Features include user management, activity logs, and real-time notifications.',
-    image: '/assets/img/reserveRooms.png',  // Ruta desde public
+    image: reserveRooms,
     demoUrl: 'https://front-hackathon-henna.vercel.app/',
     repoUrl: 'https://github.com/John-Vivas/Hackathon',
-    technologies: ['React', 'JavaScript', 'Node.js', 'MongoDB', 'Express'],
+    technologies: ['React', 'javaScript', 'node.js', 'mongoDB', 'express'],
     featured: false
   },
   {
     id: 5,
     title: 'Professional portfolio website',
     description: 'A personal portfolio website showcasing my projects, skills, and experience. Features include a blog section, contact form, and responsive design.',
-    image: '/assets/img/professional_portfolio.png',  // Ruta desde public
-    demoUrl: 'https://john-vivas.github.io/Professional-Portfolio',
+    image: imgProfessionalPortfolio,
+    demoUrl: 'https://example.com/demo5',
     repoUrl: 'https://github.com/John-Vivas/Professional-Portfolio',
     technologies: ['React', 'TypeScript', 'Tailwind CSS', 'Vite', 'Framer Motion'],
     featured: false
@@ -330,8 +238,8 @@ export const mockProjects: Project[] = [
   {
     id: 6,
     title: 'Forohub-backend',
-    description: 'A project with Spring Boot, Lombok, Spring Security, and JWT. It is a backend application that provides RESTful APIs for managing user authentication and authorization.',
-    image: '/assets/img/badgeSpring.png',  // Ruta desde public
+    description: 'A project with spring boot Lombok, spring security, and JWT. It is a backend application that provides RESTful APIs for managing user authentication and authorization.',
+    image: badgeSpring,
     demoUrl: '#',
     repoUrl: 'https://github.com/yourusername/real-estate',
     technologies: ['Spring Boot', 'DevTools', 'MySQL', 'FlyWay', 'Spring Security'],
@@ -341,7 +249,7 @@ export const mockProjects: Project[] = [
     id: 7,
     title: 'Literatura Backend',
     description: 'This app lets users manage books and authors: search books by title via an external API, view local book and author lists, find authors alive in a given year, and filter books by language.',
-    image: '/assets/img/badgeliteralura.png',  // Ruta desde public
+    image: badgeLiteratura,
     demoUrl: '#',
     repoUrl: 'https://github.com/John-Vivas/Literatura-BackenProyect2',
     technologies: ['Java', 'Spring Boot', 'Spring Data JPA', 'Git'],
@@ -351,21 +259,113 @@ export const mockProjects: Project[] = [
     id: 8,
     title: 'Conversor de Monedas',
     description: 'A simple Java application that converts between different currencies using real-time exchange rates from an external API.',
-    image: '/assets/img/badgeConversor.png',  // Ruta desde public
+    image: badgeConversor,
     demoUrl: '#',
     repoUrl: 'https://github.com/John-Vivas/Conversor-de-Monedas-BackendProject1',
-    technologies: ['Java'],
+    technologies: ['java'],
     featured: false
   },
   {
     id: 9,
-    title: 'e-Commerce personal',
+    title: 'e-Commerce pesonal',
     description: 'A simple eCommerce website built with HTML and CSS, featuring a clean layout for displaying products, prices, and basic shopping interface elements.',
-    image: '/assets/img/badgeSpring.png',  // Ruta desde public
+    image: badgeSpring,
     demoUrl: 'https://john-vivas.github.io/page/',
     repoUrl: 'https://github.com/John-Vivas/page',
     technologies: ['HTML', 'CSS', 'JavaScript'],
     featured: false
   }
 ];
+// export const mockProjects: Project[] = [
+//   {
+//     id: 3,
+//     title: 'Brand Booster',
+//     description: 'COMING SOON! A powerful eCommerce platform designed to boost small, medium, and large businesses. Features include product management, order processing, and customer engagement tools.',
+//     image: '../assets/img/brandBooster.png',  // Ruta desde public
+//     demoUrl: '#',
+//     repoUrl: 'https://github.com/John-Vivas/Brand-Booster',
+//     technologies: ['React', 'Node.js', 'Express', 'MongoDB', 'Stripe', 'MercadoPago', 'JWT'],
+//     featured: true
+//   },
+//   {
+//     id: 2,
+//     title: 'COMING SOON! AVANCE AND TECHNOLOGY S.A.S',
+//     description: 'A modern and responsive company page showcasing the services and projects of Software A&T. Features include a portfolio section, testimonials, and a contact form.',
+//     image: '../assets/img/AdvanceAndTechnology.png',  // Ruta desde public
+//     demoUrl: '#',
+//     repoUrl: 'https://github.com/Advance-and-Technology/Page-Web',
+//     technologies: ['React', 'TypeScript', 'Firebase', 'Tailwind CSS', 'React Query'],
+//     featured: true
+//   },
+//   {
+//     id: 1,
+//     title: 'COMING SOON! Hackathon Project - Agents AI Reactor Microsoft',
+//     description: 'A hackathon project that leverages AI to develop a web application for managing natural medicine prescriptions.',
+//     image: '../assets/img/hackathon.png',  // Ruta desde public
+//     demoUrl: '#',
+//     repoUrl: '#',
+//     technologies: ['', '', '', '', ''],
+//     featured: true
+//   },
+//   {
+//     id: 4,
+//     title: 'Hackathon Project - ReserverRooms',
+//     description: 'A project by admin rooms that focuses on creating a web application for managing and monitoring admin activities. Features include user management, activity logs, and real-time notifications.',
+//     image: '../assets/img/reserveRooms.png',  // Ruta desde public
+//     demoUrl: 'https://front-hackathon-henna.vercel.app/',
+//     repoUrl: 'https://github.com/John-Vivas/Hackathon',
+//     technologies: ['React', 'JavaScript', 'Node.js', 'MongoDB', 'Express'],
+//     featured: false
+//   },
+//   {
+//     id: 5,
+//     title: 'Professional portfolio website',
+//     description: 'A personal portfolio website showcasing my projects, skills, and experience. Features include a blog section, contact form, and responsive design.',
+//     image: '../assets/img/professional_portfolio.png',  // Ruta desde public
+//     demoUrl: 'https://john-vivas.github.io/Professional-Portfolio',
+//     repoUrl: 'https://github.com/John-Vivas/Professional-Portfolio',
+//     technologies: ['React', 'TypeScript', 'Tailwind CSS', 'Vite', 'Framer Motion'],
+//     featured: false
+//   },
+//   {
+//     id: 6,
+//     title: 'Forohub-backend',
+//     description: 'A project with Spring Boot, Lombok, Spring Security, and JWT. It is a backend application that provides RESTful APIs for managing user authentication and authorization.',
+//     image: '../assets/img/badgeSpring.png',  // Ruta desde public
+//     demoUrl: '#',
+//     repoUrl: 'https://github.com/yourusername/real-estate',
+//     technologies: ['Spring Boot', 'DevTools', 'MySQL', 'FlyWay', 'Spring Security'],
+//     featured: false
+//   },
+//   {
+//     id: 7,
+//     title: 'Literatura Backend',
+//     description: 'This app lets users manage books and authors: search books by title via an external API, view local book and author lists, find authors alive in a given year, and filter books by language.',
+//     image: '../assets/img/badgeliteralura.png',  // Ruta desde public
+//     demoUrl: '#',
+//     repoUrl: 'https://github.com/John-Vivas/Literatura-BackenProyect2',
+//     technologies: ['Java', 'Spring Boot', 'Spring Data JPA', 'Git'],
+//     featured: false
+//   },
+//   {
+//     id: 8,
+//     title: 'Conversor de Monedas',
+//     description: 'A simple Java application that converts between different currencies using real-time exchange rates from an external API.',
+//     image: '../assets/img/badgeConversor.png',  // Ruta desde public
+//     demoUrl: '#',
+//     repoUrl: 'https://github.com/John-Vivas/Conversor-de-Monedas-BackendProject1',
+//     technologies: ['Java'],
+//     featured: false
+//   },
+//   {
+//     id: 9,
+//     title: 'e-Commerce personal',
+//     description: 'A simple eCommerce website built with HTML and CSS, featuring a clean layout for displaying products, prices, and basic shopping interface elements.',
+//     image: '../assets/img/badgeSpring.png',  // Ruta desde public
+//     demoUrl: 'https://john-vivas.github.io/page/',
+//     repoUrl: 'https://github.com/John-Vivas/page',
+//     technologies: ['HTML', 'CSS', 'JavaScript'],
+//     featured: false
+//   }
+// ];
 
