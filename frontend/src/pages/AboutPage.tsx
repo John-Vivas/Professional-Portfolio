@@ -8,7 +8,7 @@ import TechStack from "../components/about/TechStack";
 import Education from "../components/about/Education";
 import Experience from "../components/about/Experience";
 import { fadeIn } from "../utils/animations";
-import profilePhoto from "../../public/assets//img/photo_profetional.jpg";
+import profilePhoto from "../assets//img/photo_profetional.jpg";
 
 const AboutPage: React.FC = () => {
   return (
