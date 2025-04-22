@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 import { ArrowRight, Download } from 'lucide-react';
 import Button from '../shared/Button';
 import { textVariant, fadeIn } from '../../utils/animations';
-import profilePhoto from '../../assets/img/professional_portfolio.png';
+import profilePhoto from '../../assets/img/photo_profetional.jpg';
 
 const Hero: React.FC = () => {
   return (
