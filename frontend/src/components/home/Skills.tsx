@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Code, Server, Database, Figma, Palette, Wrench } from 'lucide-react';
+import { Code, Server, Database, Bot, Palette, Wrench } from 'lucide-react';
 import Section from '../shared/Section';
 import { fadeIn } from '../../utils/animations';
 
@@ -17,26 +17,21 @@ const Skills: React.FC = () => {
       icon: <Code size={24} />,
       title: 'Frontend Development',
       description: 'Building responsive, fast, and accessible web applications.',
-      technologies: ['React', 'TypeScript', 'Next.js', 'TailwindCSS', 'Redux']
+      technologies: ['React', 'TypeScript', 'JavaScript', 'TailwindCSS']
     },
     {
       icon: <Server size={24} />,
       title: 'Backend Development',
       description: 'Creating robust, secure, and scalable server-side applications.',
-      technologies: ['Node.js', 'Express', 'NestJS', 'REST APIs', 'GraphQL']
+      technologies: ['Node.js', 'Express', 'Django', 'REST APIs', 'Spring Boot']
     },
     {
       icon: <Database size={24} />,
       title: 'Database Design',
       description: 'Designing efficient database schemas and queries.',
-      technologies: ['PostgreSQL', 'MongoDB', 'Redis', 'Prisma', 'Supabase']
+      technologies: ['PostgreSQL', 'MongoDB', 'Mysql', 'Firebase']
     },
-    {
-      icon: <Figma size={24} />,
-      title: 'UI/UX Design',
-      description: 'Creating intuitive user interfaces and experiences.',
-      technologies: ['Figma', 'Adobe XD', 'Wireframing', 'Prototyping']
-    },
+
     {
       icon: <Palette size={24} />,
       title: 'Mobile Development',
@@ -47,14 +42,29 @@ const Skills: React.FC = () => {
       icon: <Wrench size={24} />,
       title: 'DevOps & Deployment',
       description: 'Setting up CI/CD pipelines and managing cloud infrastructure.',
-      technologies: ['Docker', 'AWS', 'GitHub Actions', 'Vercel', 'Netlify']
+      technologies: ['GitHub Actions', 'Vercel']
+    }, {
+      icon: <Bot size={24} />,
+      title: "AI Agent Development",
+      description: "Creating intelligent AI agents for automation, data processing, and interactive applications across platforms.",
+      technologies: [
+        "Azure AI Agent Service",
+        "Python",
+        "Semantic Kernel",
+        "LangChain",
+        "OpenAI",
+        "Azure Functions",
+        "GitHub Models",
+        "Azure Cosmos DB",
+      ]
     }
+
   ];
 
   return (
-    <Section 
-      id="skills" 
-      title="My Skills" 
+    <Section
+      id="skills"
+      title="My Skills"
       subtitle="Technologies and tools I work with"
     >
       <motion.div
@@ -72,10 +82,10 @@ const Skills: React.FC = () => {
             <div className="w-12 h-12 rounded-lg bg-accent/20 flex items-center justify-center text-accent mb-4">
               {skill.icon}
             </div>
-            
+
             <h3 className="text-xl font-bold mb-2">{skill.title}</h3>
             <p className="text-text-secondary mb-4">{skill.description}</p>
-            
+
             <div className="flex flex-wrap gap-2">
               {skill.technologies.map((tech, techIndex) => (
                 <span

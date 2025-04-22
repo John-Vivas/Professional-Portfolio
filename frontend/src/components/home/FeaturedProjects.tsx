@@ -12,9 +12,9 @@ const FeaturedProjects: React.FC = () => {
 
   if (error) {
     return (
-      <Section 
-        id="projects" 
-        title="Featured Projects" 
+      <Section
+        id="projects"
+        title="Featured Projects"
         subtitle="A selection of my recent work"
       >
         <div className="text-center text-error p-8">
@@ -25,9 +25,9 @@ const FeaturedProjects: React.FC = () => {
   }
 
   return (
-    <Section 
-      id="projects" 
-      title="Featured Projects" 
+    <Section
+      id="projects"
+      title="Featured Projects"
       subtitle="A selection of my recent work"
       className="bg-primary/30"
     >
@@ -58,11 +58,11 @@ const FeaturedProjects: React.FC = () => {
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-primary to-transparent opacity-60" />
                 </div>
-                
+
                 <div className="p-6">
                   <h3 className="text-xl font-bold mb-2">{project.title}</h3>
                   <p className="text-text-secondary mb-4 line-clamp-3">{project.description}</p>
-                  
+
                   <div className="flex flex-wrap gap-2 mb-4">
                     {project.technologies.slice(0, 4).map((tech, index) => (
                       <span
@@ -78,7 +78,7 @@ const FeaturedProjects: React.FC = () => {
                       </span>
                     )}
                   </div>
-                  
+
                   <div className="flex items-center justify-between">
                     <a
                       href={project.repoUrl}
@@ -101,10 +101,13 @@ const FeaturedProjects: React.FC = () => {
               </motion.div>
             ))}
           </motion.div>
-          
+
           <div className="mt-12 text-center">
-            <Button as={Link} to="/projects" variant="primary">
-              View All Projects <ArrowRight className="ml-2" size={18} />
+            <Button variant="primary" onClick={() => window.scrollTo(0, 0)}>
+              <Link to="/projects" className='inline-flex items-center'>
+                View All Projects <ArrowRight className="ml-2" size={18} />
+              </Link>
+
             </Button>
           </div>
         </>

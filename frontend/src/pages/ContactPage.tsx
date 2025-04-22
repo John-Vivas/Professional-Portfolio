@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Mail, MapPin, Phone, Github as GitHub, Linkedin, Twitter } from 'lucide-react';
+import { Mail, MapPin, Phone, Github as GitHub, Linkedin } from 'lucide-react';
 import PageWrapper from '../components/shared/PageWrapper';
 import Navbar from '../components/shared/Navbar';
 import Footer from '../components/shared/Footer';
@@ -13,48 +13,48 @@ const ContactPage: React.FC = () => {
     {
       icon: <Mail className="text-accent" size={24} />,
       title: 'Email',
-      value: 'contact@example.com',
-      link: 'mailto:contact@example.com'
+      value: 'j.vivas0122@gmail.com',
+      link: 'mailto:j.vivas0122@gmail.com'
     },
     {
       icon: <MapPin className="text-accent" size={24} />,
       title: 'Location',
-      value: 'New York, NY, USA',
-      link: 'https://maps.google.com/?q=New+York'
+      value: 'Cali, Valle, Colombia',
+      link: 'https://maps.app.goo.gl/iygKLXg5iNHz1gFs7'
     },
     {
       icon: <Phone className="text-accent" size={24} />,
       title: 'Phone',
-      value: '+1 (555) 123-4567',
-      link: 'tel:+15551234567'
+      value: '+57 (319) 663-5716',
+      link: 'tel:+573196635716'
     }
   ];
-  
+
   const socialLinks = [
     {
       icon: <GitHub size={20} />,
       title: 'GitHub',
-      link: 'https://github.com'
+      link: 'https://github.com/John-Vivas'
     },
     {
       icon: <Linkedin size={20} />,
       title: 'LinkedIn',
-      link: 'https://linkedin.com'
+      link: 'https://linkedin.com/in/john-e-vivas'
     },
-    {
-      icon: <Twitter size={20} />,
-      title: 'Twitter',
-      link: 'https://twitter.com'
-    }
+    // {
+    //   icon: <Twitter size={20} />,
+    //   title: 'Twitter',
+    //   link: 'https://twitter.com'
+    // }
   ];
-  
+
   return (
     <PageWrapper>
       <Navbar />
       <main>
-        <Section 
-          id="contact" 
-          title="Contact Me" 
+        <Section
+          id="contact"
+          title="Contact Me"
           subtitle="Get in touch for collaboration or inquiries"
         >
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
@@ -67,11 +67,11 @@ const ContactPage: React.FC = () => {
             >
               <h3 className="text-2xl font-bold mb-6">Let's Connect</h3>
               <p className="text-text-secondary mb-8">
-                Whether you have a project in mind, a question about my work, or just want to say hello, 
-                I'd love to hear from you. Feel free to reach out through any of the channels below, 
+                Whether you have a project in mind, a question about my work, or just want to say hello,
+                I'd love to hear from you. Feel free to reach out through any of the channels below,
                 or use the contact form to send me a message directly.
               </p>
-              
+
               <div className="space-y-6 mb-8">
                 {contactInfo.map((item, index) => (
                   <motion.div
@@ -96,7 +96,7 @@ const ContactPage: React.FC = () => {
                   </motion.div>
                 ))}
               </div>
-              
+
               <h4 className="text-lg font-semibold mb-4">Connect on Social Media</h4>
               <div className="flex space-x-4">
                 {socialLinks.map((item, index) => (
@@ -114,7 +114,7 @@ const ContactPage: React.FC = () => {
                 ))}
               </div>
             </motion.div>
-            
+
             {/* Contact Form */}
             <motion.div
               variants={fadeIn('left', 0.2)}

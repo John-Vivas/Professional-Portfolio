@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Edit, Trash2, Star, StarOff } from 'lucide-react';
 import { Project } from '../../types';
 import { projectsApi } from '../../utils/api';
-import Button from '../shared/Button';
+
 
 interface ProjectsListProps {
   projects: Project[];
@@ -13,15 +13,15 @@ interface ProjectsListProps {
 const ProjectsList: React.FC<ProjectsListProps> = ({ projects, onEdit, onRefresh }) => {
   const [deletingId, setDeletingId] = useState<number | null>(null);
   const [confirmDelete, setConfirmDelete] = useState<number | null>(null);
-  
+
   const handleDelete = async (id: number) => {
     if (confirmDelete !== id) {
       setConfirmDelete(id);
       return;
     }
-    
+
     setDeletingId(id);
-    
+
     try {
       await projectsApi.delete(id);
       onRefresh();
@@ -32,7 +32,7 @@ const ProjectsList: React.FC<ProjectsListProps> = ({ projects, onEdit, onRefresh
       setConfirmDelete(null);
     }
   };
-  
+
   const handleToggleFeatured = async (project: Project) => {
     try {
       await projectsApi.update(project.id, {
@@ -43,7 +43,7 @@ const ProjectsList: React.FC<ProjectsListProps> = ({ projects, onEdit, onRefresh
       console.error('Error updating project:', error);
     }
   };
-  
+
   return (
     <div className="overflow-x-auto">
       <table className="w-full table-auto border-collapse">
@@ -64,16 +64,15 @@ const ProjectsList: React.FC<ProjectsListProps> = ({ projects, onEdit, onRefresh
             </tr>
           ) : (
             projects.map((project) => (
-              <tr 
+              <tr
                 key={project.id}
                 className="border-b border-gray-700 hover:bg-primary/20 transition-colors"
               >
                 <td className="px-4 py-3">
                   <button
                     onClick={() => handleToggleFeatured(project)}
-                    className={`p-1.5 rounded-full transition-colors ${
-                      project.featured ? 'text-accent hover:bg-accent/20' : 'text-gray-500 hover:bg-gray-700'
-                    }`}
+                    className={`p-1.5 rounded-full transition-colors ${project.featured ? 'text-accent hover:bg-accent/20' : 'text-gray-500 hover:bg-gray-700'
+                      }`}
                     aria-label={project.featured ? 'Remove from featured' : 'Add to featured'}
                   >
                     {project.featured ? <Star size={18} /> : <StarOff size={18} />}
@@ -108,11 +107,10 @@ const ProjectsList: React.FC<ProjectsListProps> = ({ projects, onEdit, onRefresh
                     </button>
                     <button
                       onClick={() => handleDelete(project.id)}
-                      className={`p-1.5 rounded-full transition-colors ${
-                        confirmDelete === project.id
-                          ? 'bg-error/20 text-error'
-                          : 'text-text-secondary hover:bg-error/20 hover:text-error'
-                      }`}
+                      className={`p-1.5 rounded-full transition-colors ${confirmDelete === project.id
+                        ? 'bg-error/20 text-error'
+                        : 'text-text-secondary hover:bg-error/20 hover:text-error'
+                        }`}
                       disabled={deletingId === project.id}
                       aria-label={`Delete ${project.title}`}
                     >

@@ -20,43 +20,49 @@ interface CertificationItem {
 const Education: React.FC = () => {
   const educationItems: EducationItem[] = [
     {
-      degree: 'Master of Computer Science',
-      institution: 'Stanford University',
-      duration: '2018 - 2020',
+      degree: 'Programming Technician',
+      institution: 'Politecnico PIO',
+      duration: '2024 - 2025',
       description: 'Specialized in Artificial Intelligence and Machine Learning with a focus on web technologies and distributed systems.'
     },
     {
-      degree: 'Bachelor of Science in Computer Science',
-      institution: 'MIT',
-      duration: '2014 - 2018',
-      description: 'Graduated with honors. Focused on software engineering, algorithms, and full-stack development.'
+      degree: 'Programming Bootcamp',
+      institution: 'One Oracle Next Education',
+      duration: '2023 - 2024',
+      description: 'Intensive training in programming, covering Backend development in Spring Boot with java.'
+    },
+    {
+      degree: 'Biomedical Engineering',
+      institution: 'UAO',
+      duration: '2018 - 2022',
+      description: 'Studied Biomedical Engineering with a focus on medical devices and healthcare technology. Completed 7 semesters.'
     }
   ];
-  
+
   const certifications: CertificationItem[] = [
     {
-      title: 'AWS Certified Solutions Architect',
-      issuer: 'Amazon Web Services',
-      date: 'Jan 2022',
-      credential: 'https://example.com/aws-cert'
+      title: 'SQL Training with Oracle MySQL Server - ONE',
+      issuer: 'Alura Latam',
+      date: 'Nov 2025',
+      credential: 'https://app.aluracursos.com/degree/certificate/6ee3de23-a637-4218-9322-6388e99b4e34?lang'
     },
     {
-      title: 'Google Professional Cloud Developer',
-      issuer: 'Google Cloud',
-      date: 'Mar 2021',
-      credential: 'https://example.com/gcp-cert'
+      title: 'Java and Spring Boot G6 Training - ONE',
+      issuer: 'Alura Latam',
+      date: 'Jul 2025',
+      credential: 'https://app.aluracursos.com/degree/certificate/6f4608b1-6e5d-42bc-a1bc-fb2eff670f23?lang'
     },
     {
-      title: 'Certified Kubernetes Administrator',
-      issuer: 'Cloud Native Computing Foundation',
-      date: 'Sep 2021',
-      credential: 'https://example.com/k8s-cert'
+      title: 'React Native Practical Course: List Management and API Consumption',
+      issuer: 'Platzi',
+      date: 'Jun 2023',
+      credential: 'https://platzi.com/p/john0122vivas98/curso/2557-react-native-listas-apis/diploma/detalle/'
     },
     {
-      title: 'React and Redux Professional Certification',
-      issuer: 'Meta',
-      date: 'May 2022',
-      credential: 'https://example.com/react-cert'
+      title: 'Intermediate Python Course: Comprehensions, Lambdas, and Error Handling',
+      issuer: 'Platzi',
+      date: 'May 2023',
+      credential: 'https://platzi.com/p/john0122vivas98/curso/2255-python-intermedio/diploma/detalle/'
     }
   ];
 
@@ -73,7 +79,7 @@ const Education: React.FC = () => {
           <Bookmark className="mr-2 text-accent" size={24} />
           Education
         </h3>
-        
+
         <div className="space-y-6">
           {educationItems.map((item, index) => (
             <motion.div
@@ -95,7 +101,7 @@ const Education: React.FC = () => {
           ))}
         </div>
       </motion.div>
-      
+
       {/* Certifications */}
       <motion.div
         variants={fadeIn('up', 0.3)}
@@ -107,7 +113,7 @@ const Education: React.FC = () => {
           <Award className="mr-2 text-accent" size={24} />
           Certifications
         </h3>
-        
+
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           {certifications.map((cert, index) => (
             <motion.div

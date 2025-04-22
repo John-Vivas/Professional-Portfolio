@@ -1,10 +1,10 @@
-import React from 'react';
+
 import { Link } from 'react-router-dom';
-import { Github, Linkedin, Twitter, Mail, Heart } from 'lucide-react';
+import { Github, Linkedin, Mail } from 'lucide-react';
 
 const Footer: React.FC = () => {
   const currentYear = new Date().getFullYear();
-  
+
   return (
     <footer className="bg-primary py-12">
       <div className="container mx-auto px-4">
@@ -12,15 +12,15 @@ const Footer: React.FC = () => {
           {/* Logo and brief description */}
           <div className="col-span-1 md:col-span-2">
             <Link to="/" className="text-2xl font-bold mb-4 inline-block">
-              <span className="text-accent">Dev</span>Portfolio
+              <span className="text-accent">WELCOME! My</span>Portfolio
             </Link>
             <p className="text-text-secondary mb-6 max-w-md">
-              A passionate fullstack developer creating innovative web applications 
+              A passionate fullstack developer creating innovative web applications
               with modern technologies and best practices.
             </p>
             <div className="flex space-x-4">
               <a
-                href="https://github.com"
+                href="https://github.com/John-Vivas"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-text-secondary hover:text-accent transition-colors"
@@ -29,7 +29,7 @@ const Footer: React.FC = () => {
                 <Github size={20} />
               </a>
               <a
-                href="https://linkedin.com"
+                href="https://linkedin.com/in/john-e-vivas"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-text-secondary hover:text-accent transition-colors"
@@ -37,7 +37,7 @@ const Footer: React.FC = () => {
               >
                 <Linkedin size={20} />
               </a>
-              <a
+              {/* <a
                 href="https://twitter.com"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -45,9 +45,9 @@ const Footer: React.FC = () => {
                 aria-label="Twitter"
               >
                 <Twitter size={20} />
-              </a>
+              </a> */}
               <a
-                href="mailto:contact@example.com"
+                href="mailto:j.vivas0122@gmail.com"
                 className="text-text-secondary hover:text-accent transition-colors"
                 aria-label="Email"
               >
@@ -55,7 +55,7 @@ const Footer: React.FC = () => {
               </a>
             </div>
           </div>
-          
+
           {/* Quick Links */}
           <div>
             <h3 className="text-text-primary font-bold mb-4">Quick Links</h3>
@@ -77,34 +77,34 @@ const Footer: React.FC = () => {
               </li>
             </ul>
           </div>
-          
+
           {/* Contact */}
           <div>
             <h3 className="text-text-primary font-bold mb-4">Contact Info</h3>
             <address className="not-italic text-text-secondary space-y-2">
-              <p>New York, NY</p>
+              <p>Cali, CO</p>
               <p>
                 <a href="mailto:contact@example.com" className="hover:text-accent transition-colors">
-                  contact@example.com
+                  j.vivas0122@gmail.com
                 </a>
               </p>
               <p>
-                <a href="tel:+15551234567" className="hover:text-accent transition-colors">
-                  +1 (555) 123-4567
+                <a href="tel:+573196635716" className="hover:text-accent transition-colors">
+                  +57 (319) 663-5716
                 </a>
               </p>
             </address>
           </div>
         </div>
-        
+
         <hr className="border-gray-800 my-8" />
-        
+
         <div className="flex flex-col md:flex-row justify-between items-center">
           <p className="text-text-secondary text-sm">
-            &copy; {currentYear} DevPortfolio. All rights reserved.
+            &copy; {currentYear} John E Vivas. All rights reserved.
           </p>
           <p className="text-text-secondary text-sm flex items-center mt-4 md:mt-0">
-            Made with <Heart size={16} className="mx-1 text-error" /> using React & TypeScript
+            Made with using React & TypeScript
           </p>
         </div>
       </div>

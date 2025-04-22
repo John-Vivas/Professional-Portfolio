@@ -20,7 +20,7 @@ const NotFoundPage: React.FC = () => {
           >
             <h1 className="text-8xl md:text-9xl font-bold text-accent">404</h1>
           </motion.div>
-          
+
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -29,26 +29,28 @@ const NotFoundPage: React.FC = () => {
           >
             Page Not Found
           </motion.h2>
-          
+
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.3, duration: 0.5 }}
             className="text-text-secondary mt-4"
           >
-            The page you are looking for might have been removed, had its name 
+            The page you are looking for might have been removed, had its name
             changed, or is temporarily unavailable.
           </motion.p>
-          
+
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.4, duration: 0.5 }}
             className="mt-8"
           >
-            <Button as={Link} to="/" variant="primary" size="lg">
-              <ArrowLeft className="mr-2" size={20} />
-              Back to Home
+            <Button variant="primary" size="lg">
+              <Link to="/" className="flex items-center">
+                <ArrowLeft className="mr-2" size={20} />
+                Back to Home
+              </Link>
             </Button>
           </motion.div>
         </div>

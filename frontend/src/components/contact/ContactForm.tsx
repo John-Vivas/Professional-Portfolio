@@ -22,23 +22,23 @@ const ContactForm: React.FC = () => {
   const [isSubmitting, setIsSubmitting] = React.useState(false);
   const [submitSuccess, setSubmitSuccess] = React.useState(false);
   const [submitError, setSubmitError] = React.useState<string | null>(null);
-  
-  const { 
-    register, 
-    handleSubmit, 
+
+  const {
+    register,
+    handleSubmit,
     reset,
-    formState: { errors } 
+    formState: { errors }
   } = useForm<ContactFormData>({
     resolver: zodResolver(contactSchema)
   });
-  
+
   const onSubmit = async (data: ContactFormData) => {
     setIsSubmitting(true);
     setSubmitError(null);
-    
+
     try {
       const success = await contactApi.submitForm(data);
-      
+
       if (success) {
         setSubmitSuccess(true);
         reset();
@@ -56,7 +56,7 @@ const ContactForm: React.FC = () => {
       setIsSubmitting(false);
     }
   };
-  
+
   return (
     <motion.div
       initial="hidden"
@@ -64,13 +64,13 @@ const ContactForm: React.FC = () => {
       viewport={{ once: true, amount: 0.2 }}
       className="bg-primary/20 rounded-lg p-6 md:p-8 shadow-lg"
     >
-      <motion.h3 
+      <motion.h3
         variants={fadeIn('up', 0.1)}
         className="text-2xl font-bold mb-6"
       >
         Send Me a Message
       </motion.h3>
-      
+
       {submitSuccess && (
         <motion.div
           initial={{ opacity: 0, y: -10 }}
@@ -80,7 +80,7 @@ const ContactForm: React.FC = () => {
           <span>Your message has been sent successfully!</span>
         </motion.div>
       )}
-      
+
       {submitError && (
         <motion.div
           initial={{ opacity: 0, y: -10 }}
@@ -90,7 +90,7 @@ const ContactForm: React.FC = () => {
           <span>{submitError}</span>
         </motion.div>
       )}
-      
+
       <form onSubmit={handleSubmit(onSubmit)}>
         <motion.div variants={fadeIn('up', 0.2)} className="mb-4">
           <label htmlFor="name" className="block text-text-primary mb-2">
@@ -99,17 +99,16 @@ const ContactForm: React.FC = () => {
           <input
             id="name"
             type="text"
-            className={`w-full px-4 py-2 bg-background border rounded-md focus:outline-none focus:ring-2 focus:ring-accent ${
-              errors.name ? 'border-error' : 'border-gray-700'
-            }`}
-            placeholder="John Doe"
+            className={`w-full px-4 py-2 bg-background border rounded-md focus:outline-none focus:ring-2 focus:ring-accent ${errors.name ? 'border-error' : 'border-gray-700'
+              }`}
+            placeholder="Plase enter your name: John Doe"
             {...register('name')}
           />
           {errors.name && (
             <p className="mt-1 text-error text-sm">{errors.name.message}</p>
           )}
         </motion.div>
-        
+
         <motion.div variants={fadeIn('up', 0.3)} className="mb-4">
           <label htmlFor="email" className="block text-text-primary mb-2">
             Email Address
@@ -117,9 +116,8 @@ const ContactForm: React.FC = () => {
           <input
             id="email"
             type="email"
-            className={`w-full px-4 py-2 bg-background border rounded-md focus:outline-none focus:ring-2 focus:ring-accent ${
-              errors.email ? 'border-error' : 'border-gray-700'
-            }`}
+            className={`w-full px-4 py-2 bg-background border rounded-md focus:outline-none focus:ring-2 focus:ring-accent ${errors.email ? 'border-error' : 'border-gray-700'
+              }`}
             placeholder="john@example.com"
             {...register('email')}
           />
@@ -127,7 +125,7 @@ const ContactForm: React.FC = () => {
             <p className="mt-1 text-error text-sm">{errors.email.message}</p>
           )}
         </motion.div>
-        
+
         <motion.div variants={fadeIn('up', 0.4)} className="mb-4">
           <label htmlFor="subject" className="block text-text-primary mb-2">
             Subject
@@ -135,9 +133,8 @@ const ContactForm: React.FC = () => {
           <input
             id="subject"
             type="text"
-            className={`w-full px-4 py-2 bg-background border rounded-md focus:outline-none focus:ring-2 focus:ring-accent ${
-              errors.subject ? 'border-error' : 'border-gray-700'
-            }`}
+            className={`w-full px-4 py-2 bg-background border rounded-md focus:outline-none focus:ring-2 focus:ring-accent ${errors.subject ? 'border-error' : 'border-gray-700'
+              }`}
             placeholder="Project Inquiry"
             {...register('subject')}
           />
@@ -145,7 +142,7 @@ const ContactForm: React.FC = () => {
             <p className="mt-1 text-error text-sm">{errors.subject.message}</p>
           )}
         </motion.div>
-        
+
         <motion.div variants={fadeIn('up', 0.5)} className="mb-6">
           <label htmlFor="message" className="block text-text-primary mb-2">
             Message
@@ -153,9 +150,8 @@ const ContactForm: React.FC = () => {
           <textarea
             id="message"
             rows={5}
-            className={`w-full px-4 py-2 bg-background border rounded-md focus:outline-none focus:ring-2 focus:ring-accent ${
-              errors.message ? 'border-error' : 'border-gray-700'
-            }`}
+            className={`w-full px-4 py-2 bg-background border rounded-md focus:outline-none focus:ring-2 focus:ring-accent ${errors.message ? 'border-error' : 'border-gray-700'
+              }`}
             placeholder="Tell me about your project..."
             {...register('message')}
           ></textarea>
@@ -163,12 +159,12 @@ const ContactForm: React.FC = () => {
             <p className="mt-1 text-error text-sm">{errors.message.message}</p>
           )}
         </motion.div>
-        
+
         <motion.div variants={fadeIn('up', 0.6)}>
-          <Button 
-            type="submit" 
-            variant="primary" 
-            size="lg" 
+          <Button
+            type="submit"
+            variant="primary"
+            size="lg"
             isLoading={isSubmitting}
             fullWidth
           >

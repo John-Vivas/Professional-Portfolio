@@ -16,46 +16,46 @@ const AdminPage: React.FC = () => {
   const { projects, isLoading, error } = useProjects();
   const { isAuthenticated, isLoading: authLoading, logout } = useAuth();
   const navigate = useNavigate();
-  
-  const [refreshCounter, setRefreshCounter] = useState(0);
+
+  // const [refreshCounter, setRefreshCounter] = useState(0);
   const [showForm, setShowForm] = useState(false);
   const [editingProject, setEditingProject] = useState<Project | undefined>(undefined);
-  
+
   // Redirect to login if not authenticated
   useEffect(() => {
     if (!authLoading && !isAuthenticated) {
       navigate('/login');
     }
   }, [isAuthenticated, authLoading, navigate]);
-  
+
   const refreshProjects = () => {
-    setRefreshCounter(prev => prev + 1);
+    // setRefreshCounter(prev => prev + 1);
   };
-  
+
   const handleAddNew = () => {
     setEditingProject(undefined);
     setShowForm(true);
   };
-  
+
   const handleEdit = (project: Project) => {
     setEditingProject(project);
     setShowForm(true);
   };
-  
+
   const handleFormSuccess = () => {
     setShowForm(false);
     refreshProjects();
   };
-  
+
   const handleFormCancel = () => {
     setShowForm(false);
   };
-  
+
   const handleLogout = async () => {
     await logout();
     navigate('/login');
   };
-  
+
   if (authLoading) {
     return (
       <PageWrapper>
@@ -71,7 +71,7 @@ const AdminPage: React.FC = () => {
       </PageWrapper>
     );
   }
-  
+
   return (
     <PageWrapper>
       <Navbar />
@@ -88,17 +88,17 @@ const AdminPage: React.FC = () => {
               </Button>
             </div>
           </div>
-          
+
           {showForm ? (
             <div className="mb-8">
-              <ProjectForm 
-                project={editingProject} 
-                onSuccess={handleFormSuccess} 
-                onCancel={handleFormCancel} 
+              <ProjectForm
+                project={editingProject}
+                onSuccess={handleFormSuccess}
+                onCancel={handleFormCancel}
               />
             </div>
           ) : null}
-          
+
           {isLoading ? (
             <div className="flex justify-center py-8">
               <div className="w-10 h-10 border-4 border-accent border-t-transparent rounded-full animate-spin" />
@@ -109,10 +109,10 @@ const AdminPage: React.FC = () => {
             </div>
           ) : (
             <div className="bg-primary/20 rounded-lg overflow-hidden">
-              <ProjectsList 
-                projects={projects} 
-                onEdit={handleEdit} 
-                onRefresh={refreshProjects} 
+              <ProjectsList
+                projects={projects}
+                onEdit={handleEdit}
+                onRefresh={refreshProjects}
               />
             </div>
           )}

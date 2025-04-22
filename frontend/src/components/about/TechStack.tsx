@@ -12,43 +12,43 @@ const TechStack: React.FC = () => {
     {
       title: 'Frontend',
       technologies: [
-        'React', 'TypeScript', 'Next.js', 'Vue.js', 'TailwindCSS', 
-        'Redux', 'Material UI', 'Framer Motion', 'HTML5', 'CSS3'
+        'React', 'TypeScript', 'TailwindCSS', 'JavaScript',
+        'Material UI', 'Framer Motion', 'HTML5', 'CSS3'
       ]
     },
     {
       title: 'Backend',
       technologies: [
-        'Node.js', 'Express', 'NestJS', 'Django', 'Spring Boot', 
-        'GraphQL', 'REST API', 'WebSockets', 'JWT', 'OAuth'
+        'Node.js', 'Express', 'Django', 'Spring Boot',
+        'REST API', 'WebSockets', 'JWT', 'OAuth'
       ]
     },
     {
       title: 'Database',
       technologies: [
-        'PostgreSQL', 'MongoDB', 'Redis', 'MySQL', 'Prisma', 
-        'Supabase', 'Firebase', 'Elasticsearch', 'Sequelize', 'Mongoose'
+        'PostgreSQL', 'MongoDB', 'MySQL',
+        'Firebase'
       ]
     },
     {
       title: 'DevOps & Cloud',
       technologies: [
-        'Docker', 'Kubernetes', 'AWS', 'GitHub Actions', 'CI/CD', 
-        'Vercel', 'Netlify', 'Heroku', 'Digital Ocean', 'Azure'
+        'GitHub Actions',
+        'Vercel',
       ]
     },
     {
       title: 'Tools & Others',
       technologies: [
-        'Git', 'VS Code', 'Figma', 'Jest', 'Cypress', 'Webpack', 
-        'Vite', 'Postman', 'Storybook', 'npm/yarn'
+        'Git', 'VS Code', 'IntelliJ', 'Webpack',
+        'Vite', 'Postman', 'npm/yarn'
       ]
     }
   ];
 
   return (
     <div className="mb-12">
-      <motion.h3 
+      <motion.h3
         variants={fadeIn('up', 0.1)}
         initial="hidden"
         whileInView="visible"
@@ -57,7 +57,7 @@ const TechStack: React.FC = () => {
       >
         My Tech Stack
       </motion.h3>
-      
+
       <div className="space-y-8">
         {techCategories.map((category, categoryIndex) => (
           <motion.div
