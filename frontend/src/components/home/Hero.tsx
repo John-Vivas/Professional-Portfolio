@@ -71,7 +71,8 @@ const Hero: React.FC = () => {
               </Button>
 
               <Button variant="outline" size="lg">
-                <a href="/docs/John_E_Vivas.pdf" className="inline-flex items-center" download>
+                <a href={`${import.meta.env.BASE_URL}docs/John_E_Vivas.pdf`} className="inline-flex items-center" download >
+
 
                   Download CV <Download className="ml-2" size={20} />
                 </a>
