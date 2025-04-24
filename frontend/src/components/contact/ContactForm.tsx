@@ -7,6 +7,8 @@ import { motion } from 'framer-motion';
 import Button from '../shared/Button';
 import { contactApi } from '../../utils/api';
 import { fadeIn } from '../../utils/animations';
+import emailjs from 'emailjs-com';
+
 
 // Form validation schema
 const contactSchema = z.object({
@@ -36,9 +38,21 @@ const ContactForm: React.FC = () => {
     setIsSubmitting(true);
     setSubmitError(null);
 
+
     try {
       const success = await contactApi.submitForm(data);
-
+      const result = await emailjs.send(
+        import.meta.env.VITE_EMAILJS_SERVICE_ID,
+        import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
+        {
+          name: data.name,
+          email: data.email,
+          subject: data.subject,
+          message: data.message,
+        },
+        import.meta.env.VITE_EMAILJS_PUBLIC_KEY
+      );
+      console.log(result.text);
       if (success) {
         setSubmitSuccess(true);
         reset();
