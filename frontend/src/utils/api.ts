@@ -1,13 +1,13 @@
 import axios from 'axios';
 import { Project, ContactFormData, LoginCredentials, User } from '../types';
-import imgProfessionalPortfolio from '../assets/img/professional_portfolio.png'
-import reserveRooms from '../assets/img/reserveRooms.png'
-import advanceAndTech from '../assets/img/AdvanceAndTechnology.png'
-import brandBooster from '../assets/img/brandBooster.png'
-import badgeSpring from '../assets/img/badgeSpring.png'
-import hackathon from '../assets/img/hackathon.png'
-import badgeLiteratura from '../assets/img/badgeliteralura.png'
-import badgeConversor from '../assets/img/badgeConversor.png'
+import imgProfessionalPortfolio from '../../public/img/AdvanceAndTechnology.png'
+import reserveRooms from '../../public/img/reserveRooms.png'
+import advanceAndTech from '../../public/img/AdvanceAndTechnology.png'
+import brandBooster from '../../public/img/brandBooster.png'
+import badgeSpring from '../../public/img/badgeSpring.png'
+import hackathon from '../../public/img/hackathon.png'
+import badgeLiteratura from '../../public/img/badgeliteralura.png'
+import badgeConversor from '../../public/img/badgeConversor.png'
 // Base API URL - Replace with your actual API URL in production
 const API_URL = 'https://api.example.com';
 
