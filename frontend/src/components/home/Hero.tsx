@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 import { ArrowRight, Download } from 'lucide-react';
 import Button from '../shared/Button';
 import { textVariant, fadeIn } from '../../utils/animations';
-import profilePhoto from '../../../public/img/photo_profetional.jpg';
+// import profilePhoto from '../../../public/img/photo_profetional.jpg';
 
 const Hero: React.FC = () => {
   return (
@@ -95,7 +95,7 @@ const Hero: React.FC = () => {
                 transition={{ duration: 0.5, delay: 0.2 }}
               >
                 <img
-                  src={profilePhoto}
+                  src="/img/photo_profetional.jpg"
                   alt="John Photo profile"
                   className="w-full h-full object-cover"
                 />

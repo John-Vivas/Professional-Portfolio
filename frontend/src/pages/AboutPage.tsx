@@ -8,7 +8,7 @@ import TechStack from "../components/about/TechStack";
 import Education from "../components/about/Education";
 import Experience from "../components/about/Experience";
 import { fadeIn } from "../utils/animations";
-import profilePhoto from "../../public/img/photo_profetional.jpg";
+// import profilePhoto from "../../public/img/photo_profetional.jpg";
 
 const AboutPage: React.FC = () => {
   return (
@@ -32,7 +32,7 @@ const AboutPage: React.FC = () => {
               <div className="relative mb-6">
                 <div className="aspect-square rounded-2xl overflow-hidden">
                   <img
-                    src={profilePhoto}
+                    src="/img/photo_profetional.jpg"
                     alt="John E Vivas"
                     className="w-full h-full object-cover"
                   />
