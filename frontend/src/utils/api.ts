@@ -206,7 +206,7 @@ export const mockProjects: Project[] = [
     featured: true
   },
   {
-    id: 1,
+    id: 9,
     title: 'COMING SOON! Hackathon Project - Agents AI Reactor Microsoft',
     description: 'A hackathon project that leverages AI to develop a web application for managing natural medicine prescriptions.',
     image: '/img/hackathon.png',
@@ -249,7 +249,7 @@ export const mockProjects: Project[] = [
     id: 7,
     title: 'Literatura Backend',
     description: 'This app lets users manage books and authors: search books by title via an external API, view local book and author lists, find authors alive in a given year, and filter books by language.',
-    image: '/public/img/badgeliteralura.png',
+    image: '/img/badgeliteralura.png',
     demoUrl: '#',
     repoUrl: 'https://github.com/John-Vivas/Literatura-BackenProyect2',
     technologies: ['Java', 'Spring Boot', 'Spring Data JPA', 'Git'],
@@ -266,7 +266,7 @@ export const mockProjects: Project[] = [
     featured: false
   },
   {
-    id: 9,
+    id: 1,
     title: 'e-Commerce pesonal',
     description: 'A simple eCommerce website built with HTML and CSS, featuring a clean layout for displaying products, prices, and basic shopping interface elements.',
     image: '/img/page.png',
